@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            {# 网页标题 #}
+        {% endblock %}
+    </title>
+
+    {% block head %}
+        {# 网页所引用的样式等静态资源 #}
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    {# 网页内容 #}
+{% endblock %}
+
+{% block script %}
+    {# 网页所引用的js资源 #}
+{% endblock %}
+</body>
+</html>

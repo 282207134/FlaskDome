@@ -3,10 +3,13 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
+# ---------------------------------------------------
 @app.route('/')
 def hello_world():  # put application's code here
     return 'Hello World!'
 
+
+#--------------------------------------------------
 
 @app.route('/value')
 @app.route('/value/<string:username>')
@@ -14,6 +17,7 @@ def value(username=None):
     return render_template('value.html', username=username)
 
 
+#-------------------------------------------
 @app.route('/comtrol')
 @app.route('/comtrol/<int:num>')
 def control(num=0):
@@ -26,5 +30,11 @@ def control(num=0):
     return render_template('control.html', num=num, articles=articles)
 
 
-if __name__ == '__main__':
-    app.run()
+# --------------------------------------------------
+@app.route('/include_nav')
+def include_nav():
+    return render_template('include_nav.html')
+
+    # ------------------------------------------------
+    if __name__ == '__main__':
+        app.run()
