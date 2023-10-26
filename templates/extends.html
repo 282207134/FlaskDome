@@ -1,0 +1,22 @@
+{% extends 'extends_bootstrap.html' %}
+
+{% block title %}模板的继承、包含{% endblock %}
+
+{% block inner_content %}
+    <h1>模板的继承</h1>
+    <p>可以使复杂的结构变简单。以免在多个页面中引用静态资源。</p>
+
+    <h1>模板的包含</h1>
+    <p>可以使复杂的部分单独抽离到某一个文件。</p>
+{% endblock %}
+
+{% block script %}
+    {# 继承模板内容并添加新内容 #}
+    {{ super() }}
+    <script>
+        // 以下代码用于添加文字动画。
+        let items = $('h1,p');
+        items.hide();
+        items.fadeIn(1000);
+    </script>
+{% endblock %}

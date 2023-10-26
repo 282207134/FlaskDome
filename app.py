@@ -36,5 +36,45 @@ def include_nav():
     return render_template('include_nav.html')
 
     # ------------------------------------------------
+
+
+@app.route('/include')
+def include():
+    return render_template('include.html')
+
+
+# -----------------------------------------------------
+@app.route('/extends_base')
+def extends_base():
+    return render_template('extends_base.html')
+
+    # ------------------------------------------------
+
+
+@app.route('/extends_bootstrap')
+def extends_bootstrap():
+    return render_template('extends_bootstrap.html')
+
+    # ------------------------------------------------
+
+
+@app.route('/extends')
+def extends():
+    return render_template('extends.html')
+    # ------------------------------------------------
+
+
+@app.route('/macro')
+def macro():
+    return render_template('macro.html')
+
+
+# ------------------------------------------------
+@app.route('/macro')
+def macro_called():
+    return render_template('macro_called.html')
+
+    # ------------------------------------------------
+
     if __name__ == '__main__':
         app.run()
