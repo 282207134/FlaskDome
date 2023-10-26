@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制结构</title>
+</head>
+<body>
+<h1>文章列表</h1>
+{% if num <=0 %}
+    <h2>文章数量为0，没有任何内容。</h2>
+{% else %}
+    {% for article in articles %}
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.content }}</p>
+    {% endfor %}
+{% endif %}
+</body>
+</html>
